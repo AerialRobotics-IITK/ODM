@@ -95,14 +95,15 @@ def config():
                         metavar='<PROJ4 string>',
                         help='Projection used to transform the model into geographic coordinates')
 
+	# 3000 lead to reduction in processing time by 45%
     parser.add_argument('--min-num-features',
                         metavar='<integer>',
-                        default=8000,
+                        default=3000,
                         type=int,
                         help=('Minimum number of features to extract per image. '
                               'More features leads to better results but slower '
                               'execution. Default: %(default)s'))
-
+	# No reduction in time
     parser.add_argument('--matcher-neighbors',
                         type=int,
                         metavar='<integer>',
@@ -136,7 +137,7 @@ def config():
                         help=('The maximum number of processes to use in various '
                               'processes. Peak memory requirement is ~1GB per '
                               'thread and 2 megapixel image resolution. Default: %(default)s'))
-
+	# Leads to reduction in quality but not runtime
     parser.add_argument('--depthmap-resolution',
                         metavar='<positive float>',
                         type=float,
@@ -176,12 +177,12 @@ def config():
                         default=False,
                         help='Run local bundle adjustment for every image added to the reconstruction and a global '
                              'adjustment every 100 images. Speeds up reconstruction for very large datasets.')
-
+		# Very less a bit reduction in time
     parser.add_argument('--use-3dmesh',
                     action='store_true',
-                    default=False,
+                    default=True,
                     help='Use a full 3D mesh to compute the orthophoto instead of a 2.5D mesh. This option is a bit faster and provides similar results in planar areas.')
-
+	# Making it True increases the processing time
     parser.add_argument('--skip-3dmodel',
                     action='store_true',
                     default=False,
@@ -270,7 +271,7 @@ def config():
 
     parser.add_argument('--fast-orthophoto',
                 action='store_true',
-                default=False,
+                default='True',
                 help='Skips dense reconstruction and 3D model generation. '
                 'It generates an orthophoto directly from the sparse reconstruction. '
                 'If you just need an orthophoto and do not need a full 3D model, turn on this option. '
@@ -470,7 +471,7 @@ def config():
 
     parser.add_argument('--time',
                         action='store_true',
-                        default=False,
+                        default=True,
                         help='Generates a benchmark file with runtime info\n'
                              'Default: %(default)s')
 
