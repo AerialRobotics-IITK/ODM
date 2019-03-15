@@ -5,12 +5,13 @@
 # or --force-ccd n will have to be set in the command line (if you need to)
 
 # This line is really important to set up properly
-project_path: '' # Example: '/home/user/ODMProjects
+project_path: '/home/ppatel/clutter/odm/odm_ws' # Example: '/home/user/ODMProjects
 
 # The rest of the settings will default to the values set unless you uncomment and change them
-#resize_to: 2048
+#resize_to: 1024
 #start_with: 'resize'
-#end_with: 'odm_orthophoto'
+start_with: 'odm_orthophoto'
+end_with: 'odm_orthophoto'
 #rerun_all: False
 #zip_results: False
 #verbose: False
@@ -54,7 +55,8 @@ project_path: '' # Example: '/home/user/ODMProjects
 #dem-approximate: False
 #dem-decimation: 1
 #dem-terrain-type: ComplexForest
-#orthophoto_resolution: 20.0 # Pixels/meter
+#decreasing the resolution will result in more processing time
+orthophoto_resolution: 20 # Pixels/meter
 #orthophoto_target_srs: !!null # Currently does nothing
 #orthophoto_no_tiled: False
 #orthophoto_compression: DEFLATE # Options are [JPEG, LZW, PACKBITS, DEFLATE, LZMA, NONE] Don't change unless you know what you are doing
