@@ -153,6 +153,12 @@ You can also view the orthophoto GeoTIFF in [QGIS](http://www.qgis.org/) or othe
 
 ![](https://raw.githubusercontent.com/OpenDroneMap/OpenDroneMap/master/img/bellus_map.png)
 
+## For producing orthomaps faster
+
+Run `./run.sh your_project_name --fast-orthomap`
+
+Note: Producing only orthomaps is not possible as orthophoto is generated from the georeferenced mesh. So, it has to be generated beforehand.
+
 ## Build and Run Using Docker
 
 (Instructions below apply to Ubuntu 14.04, but the Docker image workflow
