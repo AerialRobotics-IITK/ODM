@@ -163,7 +163,7 @@ Some tweaking in the parameters may also result in faster orthophoto generation
 
 `./run.sh projectname --project-path path/to/project --resize-to 5976 --force-focal 152.929 --orthophoto-resolution 1 --min-num-features 30000 --matcher-neighbor 14 --mesh-octree-depth 12`
 
-You can also have a look at (github_issue)[https://github.com/OpenDroneMap/ODM/issues/769] for better understanding of parameters located @ `OpenDroneMap-master/SuperBuild/src/opensfm/opensfm/config.py`
+You can also have a look at [github_issue](https://github.com/OpenDroneMap/ODM/issues/769) for better understanding of parameters located @ `OpenDroneMap-master/SuperBuild/src/opensfm/opensfm/config.py`
 
 
 ## Build and Run Using Docker
