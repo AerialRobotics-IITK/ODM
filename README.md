@@ -153,9 +153,9 @@ You can also view the orthophoto GeoTIFF in [QGIS](http://www.qgis.org/) or othe
 
 ![](https://raw.githubusercontent.com/OpenDroneMap/OpenDroneMap/master/img/bellus_map.png)
 
-## For producing orthomaps faster
+## For producing orthophotos faster
 
-Run `./run.sh your_project_name --fast-orthomap`
+Run `./run.sh your_project_name --fast-orthophoto`
 
 Note: Producing only orthomaps is not possible as orthophoto is generated from the georeferenced mesh. So, it has to be generated beforehand.
 
